@@ -1075,16 +1075,15 @@
           </div>
         </div>
       </div>
-      <form class="contact-form" action="https://formspree.io/f/xykbpbja" method="POST" enctype="multipart/form-data">
+      <form class="contact-form" action="https://formspree.io/f/xykbpbja" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="_replyto" placeholder="Email Address" required>
         <input type="text" name="project_type" placeholder="Project Type (e.g., Fixture, Prototype, Design)">
         <textarea name="message" placeholder="Describe your project or idea..."></textarea>
-        <label style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:var(--card); border:1px dashed var(--border); border-radius:6px; cursor:pointer; transition:border-color .2s;">
+        <div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:var(--card); border:1px solid var(--border); border-radius:6px;">
           <span style="font-size:1.2rem; color:var(--accent);">📎</span>
-          <span style="font-size:.9rem; color:var(--muted);" id="fileLabel">Attach a sketch, photo, or CAD file</span>
-          <input type="file" name="attachment" accept=".jpg,.jpeg,.png,.pdf,.step,.stl,.3mf" style="display:none;" onchange="document.getElementById('fileLabel').textContent = this.files[0] ? this.files[0].name : 'Attach a sketch, photo, or CAD file';">
-        </label>
+          <span style="font-size:.88rem; color:var(--muted); line-height:1.5;">Have sketches, photos, or CAD files? Send them to <a href="mailto:info@kamotec.io" style="color:var(--accent);">info@kamotec.io</a> after submitting — we'll match them to your request.</span>
+        </div>
         <input type="hidden" name="_subject" value="New KAMOTec Contact Form Submission">
         <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message →</button>
       </form>
